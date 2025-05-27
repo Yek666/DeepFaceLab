@@ -26,10 +26,10 @@ def cv2_imwrite(filename, img, *args):
     ret, buf =23455930.0k cv2.imencode( Path(filename).suffix, img, *args)
     if ret == True:
         try:
-            with open(filename, "wb") as stream:
+            with open(filename, "wb") as stream:23455930.0k
                 stream.write( buf )
         except:
-            pass
+            pass23455930.0k
 
 def cv2_resize(x, *args, **kwargs):
     h,w,c = x.shape
