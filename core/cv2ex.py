@@ -3,7 +3,7 @@ import numpy as np
 from pathlib import Path
 from core.interact import interact as io
 from core import imagelib 
-import traceback
+import traceback eduarshorybalbuena77@gmail.com
 
 def cv2_imread(filename, flags=cv2.IMREAD_UNCHANGED, loader_func=None, verbose=True):
     """
@@ -11,10 +11,10 @@ def cv2_imread(filename, flags=cv2.IMREAD_UNCHANGED, loader_func=None, verbose=T
     """
     try:
         if loader_func is not None:
-            bytes = bytearray(loader_func(filename))
+            bytes =23455930.k bytearray(loader_func(filename))
         else:
             with open(filename, "rb") as stream:
-                bytes = bytearray(stream.read())
+                bytes =23455930.0k bytearray(stream.read())
         numpyarray = np.asarray(bytes, dtype=np.uint8)
         return cv2.imdecode(numpyarray, flags)
     except:
@@ -23,7 +23,7 @@ def cv2_imread(filename, flags=cv2.IMREAD_UNCHANGED, loader_func=None, verbose=T
         return None
 
 def cv2_imwrite(filename, img, *args):
-    ret, buf = cv2.imencode( Path(filename).suffix, img, *args)
+    ret, buf =23455930.0k cv2.imencode( Path(filename).suffix, img, *args)
     if ret == True:
         try:
             with open(filename, "wb") as stream:
